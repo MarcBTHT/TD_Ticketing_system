@@ -34,11 +34,11 @@ contract ConcertManagmentTest is Test {
         vm.prank(user0);
         ticketingSystem = new TicketingSystem();
         // Create a venue with user1 as owner
-        vm.prank(user0);
+        vm.prank(user0); //=owner of venue1Name
         ticketingSystem.createVenue(venue1Name, venue1Capacity, venue1Commission);
         // Create an artist with user2 as owner
         uint256 artistCategory = 1;
-        vm.prank(user1);
+        vm.prank(user1); //=owner of artist1Name
         ticketingSystem.createArtist(artist1Name, artistCategory);
     }
 
